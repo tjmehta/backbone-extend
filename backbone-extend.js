@@ -1,4 +1,4 @@
-define('backbone', ['layoutmanager'], function(Backbone){
+define(['layoutmanager'], function(Backbone){
   // BackboneView default options
   var viewOptions = {
     manage:true,
