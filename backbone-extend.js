@@ -47,7 +47,7 @@ define(['layoutmanager'], function(Backbone){
   var modelFetch = Backbone.Model.prototype.fetch;
   var modelOptions = {
     fetch        : function (options) {
-      if (options.data) {
+      if (options && options.data) {
         options.data = $.param(options.data);
       }
       modelFetch.call(this, options);
@@ -120,7 +120,7 @@ define(['layoutmanager'], function(Backbone){
   var collectionFetch = Backbone.Collection.prototype.fetch;
   var collectionOptions = {
     fetch        : function (options) {
-      if (options.data) {
+      if (options && options.data) {
         options.data = $.param(options.data);
       }
       collectionFetch.call(this, options);
