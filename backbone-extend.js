@@ -8,13 +8,12 @@ define(['layoutmanager'], function(Backbone){
       view.setElement(null);
       view.remove();
     },
-    disposeEach: [],
     cleanup:function(){
       var disposeThing = function(thing) {
         if (thing) {
           if (thing.off) thing.off(null, null, this);
           if (thing.dispose) thing.dispose();
-          if (this.disposeEach) {
+          if (thing.disposeEach) {
             thing.disposeEach.forEach(function(dispose) {
               dispose.apply(thing); //apply to keep context the same.
             });
