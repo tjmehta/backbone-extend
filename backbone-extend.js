@@ -130,8 +130,8 @@ define(['layoutmanager'], function(Backbone){
   Backbone.Collection = Backbone.Collection.extend(collectionOptions);
 
   Backbone.LayoutManager.configure({
-    fetch : function(templateText){
-      return Handlebars.compile(templateText);
+    fetch : function(template){
+      return template; //using hbs instead of text now..
     },
     render: function(template, context) {
       return template(context);
