@@ -14,9 +14,9 @@ define(['layoutmanager'], function(Backbone){
           if (thing.off) thing.off(null, null, this);
           if (thing.dispose) thing.dispose();
           if (thing.disposeEach) {
-            thing.disposeEach.forEach(function(dispose) {
-              dispose.apply(thing); //apply to keep context the same.
-            });
+            while(thing.disposeEach.length) {
+              thing.disposeEach.pop().apply(thing); //apply to keep context the same.
+            }
           }
           thing = undefined;
         }

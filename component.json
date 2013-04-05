@@ -1,6 +1,6 @@
 {
   "name": "backbone-extend",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "backbone-extend.js",
   "dependencies": {
     "layoutmanager": "~0.7.5"
